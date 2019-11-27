@@ -40,5 +40,9 @@ int main(void)
 	puts(list[3]);
 	puts(list[4]);
 
+	//Sum of primes
+	result = sum_primes(10);
+	printf("Sum of primes between 2 and 10: %d\n", result);
+
 	return 0;
 }

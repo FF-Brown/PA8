@@ -78,3 +78,20 @@ int is_palindrome(char* str, int length)
 		result = is_palindrome(str + 1, length - 2);
 	return result;
 }
+int sum_primes(int n)
+{
+	int result = 0, sum = 0;
+	if (n == 2)
+		return 2;
+	else {
+		//Is prime?
+		for (int i = 2; i < n; i++) {
+			if (n % i == 0)
+				result = 1;
+		}
+		if (!result)
+			sum += n;
+		sum += sum_primes(n - 1);
+		return sum;
+	}
+}
