@@ -9,3 +9,5 @@ Description: An assortment of functions answering interview questions.
 
 char* my_str_n_cat(char* destination, char* source, int n);
 int binary_search(int arr[], int target, int size);
+void bubble_sort(char* list[], int length);
+int is_palindrome(char* str, int length);

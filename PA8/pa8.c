@@ -42,3 +42,34 @@ int binary_search(int arr[], int target, int size)
 
 	return target_index;
 }
+void bubble_sort(char* list[], int length)
+{
+	int u = 0, c = 0;
+
+	u = length - 1;
+	while (u > 1) {
+		c = 1;
+		while (c <= u) {
+			if (list[c] < list[c - 1])
+				//swap c and c-1
+				printf("Beep");
+			++c;
+		}
+		--u;
+	}
+}
+int is_palindrome(char* str, int length)
+{
+	int result = 0;
+
+	if (*str == ' ')
+		++str;
+	if (*(str + length - 1) == ' ')
+		--length;
+
+	if (length <= 1)
+		result = 1;
+	else if (*str == *(str + length - 1))
+		result = is_palindrome(str + 1, length - 2);
+	return result;
+}
