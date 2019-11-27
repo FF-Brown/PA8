@@ -44,15 +44,20 @@ int binary_search(int arr[], int target, int size)
 }
 void bubble_sort(char* list[], int length)
 {
-	int u = 0, c = 0;
+	int u = 0, c = 0, result = 0;
+	char* buff;
 
 	u = length - 1;
 	while (u > 1) {
 		c = 1;
 		while (c <= u) {
-			if (list[c] < list[c - 1])
+			result = strcmp(list[c], list[c - 1]);
+			if (result < 0) {
 				//swap c and c-1
-				printf("Beep");
+				buff = list[c];
+				list[c] = list[c - 1];
+				list[c - 1] = buff;
+			}
 			++c;
 		}
 		--u;
