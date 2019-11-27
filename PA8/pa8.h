@@ -8,4 +8,4 @@ Description: An assortment of functions answering interview questions.
 #include <stdio.h>
 
 char* my_str_n_cat(char* destination, char* source, int n);
-int binary_search(int arr[], int size);
+int binary_search(int arr[], int target, int size);
