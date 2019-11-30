@@ -95,3 +95,25 @@ int sum_primes(int n)
 		return sum;
 	}
 }
+void maximum_occurences(char phrase[], Occurences record[], int* frequency, char* result)
+{
+	int index = 0;
+	int max = record[0].num_occurences, max_index = 0;
+
+	//Record all occurences of characters
+	while (phrase[index] != '\0') {
+		++record[(int)phrase[index]].num_occurences;
+		++index;
+	}
+	//Calculate frequency of characters
+	for (int i = 0; i <= index; ++i) {
+		record[i].frequency = (double)record[i].num_occurences / index + 1;
+		//Find max occurences
+		if (record[i].num_occurences > max) {
+			max = record[i].num_occurences;
+			max_index = i;
+		}
+	}
+	*result = (char)max_index;
+	*frequency = max;	
+}

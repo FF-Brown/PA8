@@ -15,6 +15,10 @@ int main(void)
 	char* list[5] = { "cat", "baseball", "apple", "egg", "dog" };
 	char word[] = "taco cat";
 	int result = 0;
+	char phrase[] = "polka dot";
+	int frequency = 0;
+	char letter = '\0';
+	Occurences record[180] = { {0,0} };
 
 	//Strncat
 	printf("Original string: %s\n", destination);
@@ -43,6 +47,9 @@ int main(void)
 	//Sum of primes
 	result = sum_primes(10);
 	printf("Sum of primes between 2 and 10: %d\n", result);
+
+	//Maximum occurences
+	maximum_occurences(phrase, record, &frequency, &letter);
 
 	return 0;
 }
