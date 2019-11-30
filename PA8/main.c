@@ -15,7 +15,7 @@ int main(void)
 	char* list[5] = { "cat", "baseball", "apple", "egg", "dog" };
 	char word[] = "taco cat";
 	int result = 0;
-	char phrase[] = "polka dot";
+	char phrase[] = "a b c d e";
 	int frequency = 0;
 	char letter = '\0';
 	Occurences record[180] = { {0,0} };
@@ -50,6 +50,7 @@ int main(void)
 
 	//Maximum occurences
 	maximum_occurences(phrase, record, &frequency, &letter);
+	printf("Most common character is '%c' with %d occurences.\n", letter, frequency);
 
 	return 0;
 }

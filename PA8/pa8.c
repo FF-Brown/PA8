@@ -99,14 +99,17 @@ void maximum_occurences(char phrase[], Occurences record[], int* frequency, char
 {
 	int index = 0;
 	int max = record[0].num_occurences, max_index = 0;
+	int high_index = phrase[0];
 
 	//Record all occurences of characters
 	while (phrase[index] != '\0') {
 		++record[(int)phrase[index]].num_occurences;
 		++index;
+		if ((int)phrase[index] > high_index)
+			high_index = (int)phrase[index];
 	}
 	//Calculate frequency of characters
-	for (int i = 0; i <= index; ++i) {
+	for (int i = 0; i <= high_index; ++i) {
 		record[i].frequency = (double)record[i].num_occurences / index + 1;
 		//Find max occurences
 		if (record[i].num_occurences > max) {
