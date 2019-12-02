@@ -6,6 +6,13 @@ Description: An assortment of functions answering interview questions.
 
 #include "pa8.h"
 
+/*
+	Function: my_str_n_cat()
+	Date Created:
+	Description: Mimics the functionality of strncat(), copying a given number of characters from one string onto the end of another.
+	Preconditions: None
+	Postconditions: Given number of characters concatenated
+*/
 char* my_str_n_cat(char* destination, char* source, int n)
 {
 	char* buff = destination;
@@ -22,6 +29,13 @@ char* my_str_n_cat(char* destination, char* source, int n)
 	}
 	return destination;
 }
+/*
+	Function: binary_search()
+	Date Created:
+	Description: Searches through an array of integers for a given value
+	Preconditions: Array must be sorted
+	Postconditions: Returns index of value if found, -1 otherwise
+*/
 int binary_search(int arr[], int target, int size)
 {
 	int left_index = 0, right_index = size;
@@ -42,6 +56,13 @@ int binary_search(int arr[], int target, int size)
 
 	return target_index;
 }
+/*
+	Function: bubble_sort()
+	Date Created:
+	Description: Sorts an array of integers in ascending order.
+	Preconditions: None
+	Postconditions: Array is sorted
+*/
 void bubble_sort(char* list[], int length)
 {
 	int u = 0, c = 0, result = 0;
@@ -63,6 +84,13 @@ void bubble_sort(char* list[], int length)
 		--u;
 	}
 }
+/*
+	Function: is_palindrome()
+	Date Created: 
+	Description: Checks whether a given function is a palindrome. Omits whitespace. Uses recursion.
+	Preconditions: None
+	Postconditions: Returns 1 if palindrome, 0 otherwise
+*/
 int is_palindrome(char* str, int length)
 {
 	int result = 0;
@@ -78,6 +106,13 @@ int is_palindrome(char* str, int length)
 		result = is_palindrome(str + 1, length - 2);
 	return result;
 }
+/*
+	Function: sum_primes()
+	Date Created:
+	Description: Finds the sum of prime numbers from 2 to a given integer n using recursion
+	Preconditions: None
+	Postconditions: Returns sum of the values
+*/
 int sum_primes(int n)
 {
 	int result = 0, sum = 0;
@@ -95,6 +130,13 @@ int sum_primes(int n)
 		return sum;
 	}
 }
+/*
+	Function: maximum_occurences()
+	Date Created: 
+	Description: Finds the most common character in a phrase
+	Preconditions: None
+	Postconditions: Returns the most common character and its frequency via pointers. Also stores data in an array
+*/
 void maximum_occurences(char phrase[], Occurences record[], int* frequency, char* result)
 {
 	int index = 0;

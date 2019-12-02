@@ -15,7 +15,7 @@ int main(void)
 	char* list[5] = { "cat", "baseball", "apple", "egg", "dog" };
 	char word[] = "taco cat";
 	int result = 0;
-	char phrase[] = "a b c d e";
+	char phrase[] = "school's out!";
 	int frequency = 0;
 	char letter = '\0';
 	Occurences record[180] = { {0,0} };

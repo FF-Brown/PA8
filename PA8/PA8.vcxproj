@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClInclude Include="pa8.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\Documents\Drive Sync\CS_121\MyFiles\comment_block.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
